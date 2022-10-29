@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  django:
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile
+    #entrypoint: bash ./start-project.sh
+    entrypoint: bash ./django-launcher.sh
+    volumes:
+      - .:/usr/src/app
+    environment:
+      DEBUG: "True"
+      STATIC_URL: /static/
+      STATIC_ROOT: static
+    ports:
+      - "8000:8000"

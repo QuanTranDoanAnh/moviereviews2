@@ -1,0 +1,4 @@
+# Django
+Django===4.0
+# Manipulate images
+Pillow===8.2.0
